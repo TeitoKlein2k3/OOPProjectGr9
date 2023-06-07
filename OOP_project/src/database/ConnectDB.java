@@ -8,8 +8,8 @@ import java.sql.Statement;
 
 
 public class ConnectDB {
-    String connectionString = "jdbc:sqlserver://QUANG:1433;" 
-            + "databaseName=DoAnOop2;user=sa;password=123456;";
+    String connectionString = "jdbc:sqlserver://LAPTOP-QOICSPTG\\SQLEXPRESS:1433;" 
+            + "databaseName=DoAnOop2;user=sa;password=123456;encrypt=false";
     Connection conn;
     public ConnectDB(){
        
@@ -41,13 +41,15 @@ public class ConnectDB {
         return null;
     }
     //Thực thi INSERT, DELETE, UPDATE
-    public void ExcuteQueryUpdateDB(String cauTruyVanSQL){
+    public boolean ExcuteQueryUpdateDB(String cauTruyVanSQL){
        
         try {
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(cauTruyVanSQL);
+            return true;
         } catch (SQLException ex) {
             System.out.println(ex.toString());
+            return false;
         }
     }
 }
