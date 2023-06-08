@@ -1,4 +1,5 @@
 create database DoAnOop2
+go
 use DoAnOop2
 
 
