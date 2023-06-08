@@ -8,8 +8,8 @@ import java.sql.Statement;
 
 
 public class ConnectDB {
-    String connectionString = "jdbc:sqlserver://LAPTOP-QOICSPTG\\SQLEXPRESS:1433;" 
-            + "databaseName=DoAnOop2;user=sa;password=123456;encrypt=false";
+    String connectionString = "jdbc:sqlserver://Quang:1433;" 
+            + "databaseName=DoAnOop2;user=sa;password=123456";
     Connection conn;
     public ConnectDB(){
        

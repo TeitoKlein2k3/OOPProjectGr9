@@ -13,6 +13,8 @@ public class formDangNhap extends javax.swing.JFrame {
 
     public formDangNhap() {
         initComponents();
+        setResizable(false);
+        setLocationRelativeTo(null);
     }
 
 
@@ -33,6 +35,7 @@ public class formDangNhap extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Đăng nhập");
+        setMinimumSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
