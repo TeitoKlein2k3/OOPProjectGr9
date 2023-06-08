@@ -32,8 +32,6 @@ public class formChinh extends javax.swing.JFrame {
 
     public formChinh() {
         initComponents();
-        setResizable(false);
-        setLocationRelativeTo(null);
         SanPhamTable_load();
         try {
             LoaiSanPham_cmb_addItems();
