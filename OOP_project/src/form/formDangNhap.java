@@ -125,8 +125,8 @@ public class formDangNhap extends javax.swing.JFrame {
         try {
             if (rs.next()) {
                 kq = true;       
-                String ten = rs.getString("TenNhanVien");
-                String user = rs.getString("TenDangNhap");
+//                String ten = rs.getString("TenNhanVien");
+//                String user = rs.getString("TenDangNhap");
             }
         } catch (SQLException ex) {
             System.out.println("lỗi đăng nhập");

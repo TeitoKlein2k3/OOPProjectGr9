@@ -276,12 +276,27 @@ public class formChinh extends javax.swing.JFrame {
         jTable13 = new javax.swing.JTable();
         jPanel17 = new javax.swing.JPanel();
         jLabel61 = new javax.swing.JLabel();
-        jPanel18 = new javax.swing.JPanel();
+        DangXuatPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Phần mềm quản lý kho");
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPane1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jTabbedPane1ComponentShown(evt);
+            }
+        });
 
         GiaBan_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1253,7 +1268,7 @@ public class formChinh extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Nhân viên", new javax.swing.ImageIcon(getClass().getResource("/icon/NhanVien.png")), jPanel11); // NOI18N
@@ -1473,7 +1488,7 @@ public class formChinh extends javax.swing.JFrame {
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Khách hàng", new javax.swing.ImageIcon(getClass().getResource("/icon/KhachHang.png")), jPanel14); // NOI18N
@@ -1791,7 +1806,7 @@ public class formChinh extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Nhập kho", new javax.swing.ImageIcon(getClass().getResource("/icon/NhapKho.png")), jPanel8); // NOI18N
@@ -2049,7 +2064,7 @@ public class formChinh extends javax.swing.JFrame {
                         .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                        .addGap(0, 15, Short.MAX_VALUE)
+                        .addGap(0, 79, Short.MAX_VALUE)
                         .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
@@ -2079,7 +2094,7 @@ public class formChinh extends javax.swing.JFrame {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(259, Short.MAX_VALUE))
+                .addContainerGap(323, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Thống kê", new javax.swing.ImageIcon(getClass().getResource("/icon/ThongKe.png")), jPanel16); // NOI18N
@@ -2100,23 +2115,29 @@ public class formChinh extends javax.swing.JFrame {
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel61)
-                .addContainerGap(585, Short.MAX_VALUE))
+                .addContainerGap(649, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Hướng dẫn", new javax.swing.ImageIcon(getClass().getResource("/icon/HuongDan.png")), jPanel17); // NOI18N
 
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        DangXuatPanel.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                DangXuatPanelComponentShown(evt);
+            }
+        });
+
+        javax.swing.GroupLayout DangXuatPanelLayout = new javax.swing.GroupLayout(DangXuatPanel);
+        DangXuatPanel.setLayout(DangXuatPanelLayout);
+        DangXuatPanelLayout.setHorizontalGroup(
+            DangXuatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1011, Short.MAX_VALUE)
         );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 607, Short.MAX_VALUE)
+        DangXuatPanelLayout.setVerticalGroup(
+            DangXuatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 671, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Đăng xuất", new javax.swing.ImageIcon(getClass().getResource("/icon/signOut.png")), jPanel18); // NOI18N
+        jTabbedPane1.addTab("Đăng xuất", new javax.swing.ImageIcon(getClass().getResource("/icon/signOut.png")), DangXuatPanel); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -2493,6 +2514,24 @@ public class formChinh extends javax.swing.JFrame {
         KhachHangTable_load();
     }//GEN-LAST:event_ResetActionPerformed
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+
+    }//GEN-LAST:event_formWindowClosing
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+       
+    }//GEN-LAST:event_formMouseClicked
+
+    private void jTabbedPane1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jTabbedPane1ComponentShown
+        
+    }//GEN-LAST:event_jTabbedPane1ComponentShown
+
+    private void DangXuatPanelComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_DangXuatPanelComponentShown
+        formDangNhap frmdn = new formDangNhap();
+        frmdn.show();
+        this.dispose();
+    }//GEN-LAST:event_DangXuatPanelComponentShown
+
     /**
      * @param args the command line arguments
      */
@@ -2516,6 +2555,7 @@ public class formChinh extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel DangXuatPanel;
     private javax.swing.JTextField DiaChiKhachHang;
     private javax.swing.JTextField EmailKhachHang;
     private javax.swing.JTextField GiaBan_txt;
@@ -2652,7 +2692,6 @@ public class formChinh extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
