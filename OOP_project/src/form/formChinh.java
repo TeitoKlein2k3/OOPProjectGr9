@@ -2418,11 +2418,11 @@ public class formChinh extends javax.swing.JFrame {
     }//GEN-LAST:event_LoaiKhachHang_cmbActionPerformed
 
     private void ThemKhachHang_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThemKhachHang_btnActionPerformed
-        if (MaSanPham_txt.getText().equals("") || TenSanPham_txt.getText().equals("") || HangSanXuat_txt.getText().equals("")
-                || GiaNhap_txt.getText().equals("") || GiaBan_txt.getText().equals("")) {
+        if (MaKhachHang.getText().equals("") || TenKhachHang.getText().equals("") || DiaChiKhachHang.getText().equals("")
+                || SDTKhachHang.getText().equals("") || EmailKhachHang.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Bạn cần nhập đủ dữ liệu!");
         } else {
-            String sql_check_pk = "Select MaSanPham from SanPham where MaSanPham = '" + MaSanPham_txt.getText() + "'";
+            String sql_check_pk = "Select MaKhachHang from KhachHang where MaKhachHang = '" + MaKhachHang.getText() + "'";
             ResultSet rs = cn.ExcuteQueryGetTable(sql_check_pk);
             boolean check = false; //false = chưa trùng
             try {
@@ -2434,11 +2434,11 @@ public class formChinh extends javax.swing.JFrame {
             }
 
             if (check) {
-                JOptionPane.showMessageDialog(this, "Mã sản phẩm này đã tồn tại!\nLưu ý: Không được nhập trùng sản phẩm!");
+                JOptionPane.showMessageDialog(this, "Mã khách hàng này đã tồn tại!\nLưu ý: Không được nhập trùng !");
             } else {
-                String sql = "Insert into SanPham (MaSanPham, TenSanPham, TenLoaiSanPham, HangSanXuat, GiaNhap, GiaBan) "
-                        + "values( '" + MaSanPham_txt.getText() + "', '" + TenSanPham_txt.getText() + "', '" + LoaiSanPham_cmb.getSelectedItem().toString() + "' , "
-                        + "'" + HangSanXuat_txt.getText() + "' , '" + Integer.parseInt(GiaNhap_txt.getText()) + "' , '" + Integer.parseInt(GiaBan_txt.getText()) + "' )";
+                String sql = "Insert into KhachHang (MaKhachHang TenKhachHang, DiaChiKhachHang, SDTKhachHang, Email, LoaiKhachHang) "
+                        + "values( '" + MaKhachHang.getText() + "', '" + TenKhachHang.getText() + "', '" + DiaChiKhachHang.getText() + "' , "
+                        + "'" + SDTKhachHang.getText() + "' , '" + EmailKhachHang.getText() + "' , '" + LoaiKhachHang_cmb.getSelectedItem().toString() + "' )";
                 cn.ExcuteQueryUpdateDB(sql);
                 JOptionPane.showMessageDialog(this, "Thêm mới sản phẩm thành công!");
                 SanPhamTable_load();
